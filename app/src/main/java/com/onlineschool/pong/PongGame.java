@@ -7,7 +7,7 @@ import android.graphics.Paint;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class PongGame extends SurfaceView {
+public class PongGame extends SurfaceView implements Runnable {
 
     // Are we debugging?
     private final boolean DEBUGGING = true;
@@ -74,6 +74,25 @@ public class PongGame extends SurfaceView {
         // Reset the score and the player's chances
         mScore = 0;
         mLives = 3;
+
+    }
+
+    // When we start the thread with:
+    // mGameThread.start();
+    // the run method is continuously called by Android
+    // because we implemented the Runnable interface
+    // Calling mGameThread.join();
+    // will stop the thread
+    @Override
+    public void run() {
+
+        // Here is the Thread and two control variables
+        private Thread mGameThread = null;
+
+    // This volatile variable can be accessed
+    // from inside and outside the thread
+        private volatile boolean mPlaying;
+        private boolean mPaused = true;
 
     }
 
