@@ -30,7 +30,11 @@ public class Ball {
         // We will initialize the detail
         // at the start of each game
         mRect = new RectF();
+    }
 
+    // Return a reference to mRect to PongGame
+    RectF getRect(){
+        return mRect;
     }
 
 }
