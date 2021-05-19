@@ -23,4 +23,22 @@ public class PongActivity extends Activity {
         mPongGame = new PongGame(this, size.x, size.y);
         setContentView(mPongGame);
     }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+
+        // More code here later in the chapter
+
+    }
+
+    @Override
+    protected void onPause() {
+
+        super.onPause();
+
+        // More code here later in the chapter
+
+    }
 }
