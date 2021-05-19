@@ -56,4 +56,14 @@ public class Ball {
 
     }
 
+    // Reverse the vertical direction of travel
+    void reverseYVelocity(){
+        mYVelocity = -mYVelocity;
+    }
+
+    // Reverse the horizontal direction of travel
+    void reverseXVelocity(){
+        mXVelocity = -mXVelocity;
+    }
+
 }
