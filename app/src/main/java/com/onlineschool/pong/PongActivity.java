@@ -29,6 +29,8 @@ public class PongActivity extends Activity {
 
         super.onResume();
 
+        mPongGame.resume();
+
         // More code here later in the chapter
 
     }
@@ -37,6 +39,8 @@ public class PongActivity extends Activity {
     protected void onPause() {
 
         super.onPause();
+
+        mPongGame.pause();
 
         // More code here later in the chapter
 
