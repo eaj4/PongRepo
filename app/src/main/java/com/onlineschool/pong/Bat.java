@@ -56,4 +56,42 @@ public class Bat {
         // width of the screen in 1 second
         mBatSpeed = mScreenX;
     }
+
+    // Return a reference to the mRect object
+    RectF getRect(){
+        return mRect;
+    }
+
+    // Update the movement state passed
+    // in by the onTouchEvent method
+    void setMovementState(int state){
+        mBatMoving = state;
+    }
+
+    // Update the bat- Called each frame/loop
+    void update(long fps){
+
+        // Move the bat based on the mBatMoving variable
+        // and the speed of the previous frame
+        if(mBatMoving == LEFT){
+            mXCoord = mXCoord - mBatSpeed / fps;
+        }
+
+        if(mBatMoving == RIGHT){
+            mXCoord = mXCoord + mBatSpeed / fps;
+        }
+
+        // Stop the bat going off the screen
+        if(mXCoord < 0){
+            mXCoord = 0;
+        }
+        else if(mXCoord + mLength > mScreenX){
+            mXCoord = mScreenX - mLength;
+        }
+
+        // Update mRect based on the results from
+        // the previous code in update
+        mRect.left = mXCoord;
+        mRect.right = mXCoord + mLength;
+    }
 }
