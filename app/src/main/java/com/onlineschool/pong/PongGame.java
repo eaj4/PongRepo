@@ -5,6 +5,37 @@ import android.view.SurfaceView;
 
 public class PongGame extends SurfaceView {
 
+    // Are we debugging?
+
+    private final boolean DEBUGGING = true;
+
+// These objects are needed to do the drawing
+
+    private SurfaceHolder mOurHolder;
+
+    private Canvas mCanvas;
+
+    private Paint mPaint;
+
+// How many frames per second did we get?
+
+    private long mFPS;
+
+// The number of milliseconds in a second
+    private final int MILLIS_IN_SECOND = 1000;
+// Holds the resolution of the screen
+    private int mScreenX;
+    private int mScreenY;
+// How big will the text be?
+    private int mFontSize;
+    private int mFontMargin;
+// The game objects
+    private Bat mBat;
+    private Ball mBall;
+// The current score and lives remaining
+    private int mScore;
+    private int mLives;
+
     // The PongGame constructor
     // Called when this line:
     // mPongGame = new PongGame(this, size.x, size.y);
