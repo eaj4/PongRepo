@@ -95,24 +95,13 @@ public class PongGame extends SurfaceView implements Runnable {
     @Override
     public void run() {
 
-        // Here is the Thread and two control variables
-        private Thread mGameThread = null;
 
-        // This volatile variable can be accessed
-        // from inside and outside the thread
-        private volatile boolean mPlaying;
-        private boolean mPaused = true;
 
         // mPlaying gives us finer control
-
         // rather than just relying on the calls to run
-
         // mPlaying must be true AND
-
         // the thread running for the main
-
         // loop to execute
-
         while (mPlaying) {
             // What time is it now at the start of the loop?
             long frameStartTime = System.currentTimeMillis();
@@ -136,7 +125,7 @@ public class PongGame extends SurfaceView implements Runnable {
 
             // How long did this frame/loop take?
             // Store the answer in timeThisFrame
-            long timeThisFrame = System.currentTimeMillis() – frameStartTime;
+            long timeThisFrame = System.currentTimeMillis() - frameStartTime;
 
             // Make sure timeThisFrame is at least 1 millisecond
             // because accidentally dividing
