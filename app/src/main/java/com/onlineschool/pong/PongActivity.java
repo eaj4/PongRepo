@@ -1,9 +1,10 @@
 package com.onlineschool.pong;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
+import android.view.Window;
 import android.os.Bundle;
 
-public class PongActivity extends AppCompatActivity {
+public class PongActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
