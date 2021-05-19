@@ -37,4 +37,23 @@ public class Ball {
         return mRect;
     }
 
+    // Update the ball position.
+    // Called each frame/loop
+    void update(long fps){
+
+        // Move the ball based upon the
+        // horizontal (mXVelocity) and
+        // vertical(mYVelocity) speed
+        // and the current frame rate(fps)
+        // Move the top left corner
+        mRect.left = mRect.left + (mXVelocity / fps);
+        mRect.top = mRect.top + (mYVelocity / fps);
+
+        // Match up the bottom right corner
+        // based on the size of the ball
+        mRect.right = mRect.left + mBallWidth;
+        mRect.bottom = mRect.top + mBallHeight;
+
+    }
+
 }
