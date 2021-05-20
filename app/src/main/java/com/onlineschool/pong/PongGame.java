@@ -216,11 +216,10 @@ public class PongGame extends SurfaceView implements Runnable {
             // Display the drawing on screen
             // unlockCanvasAndPost is a method of SurfaceView
             mOurHolder.unlockCanvasAndPost(mCanvas);
-
         }
     }
 
-
+    //prints the debugging text
     private void printDebuggingText(){
 
         int debugSize = mFontSize / 2;
